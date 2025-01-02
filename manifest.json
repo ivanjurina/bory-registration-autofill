@@ -5,7 +5,7 @@
     "permissions": ["scripting", "storage"],
     "host_permissions": ["https://rezervacie.porodnicabory.sk/*"],
     "background": {
-        "service_worker": "background.js",
+        "service_worker": "background.js"
     },
     "content_scripts": [{
         "matches": ["https://rezervacie.porodnicabory.sk/register"],
