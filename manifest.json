@@ -2,10 +2,16 @@
     "manifest_version": 3,
     "name": "Form Autofill",
     "version": "1.0",
-    "permissions": ["scripting"],
+    "permissions": ["scripting", "storage"],
     "host_permissions": ["https://rezervacie.porodnicabory.sk/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
     "content_scripts": [{
         "matches": ["https://rezervacie.porodnicabory.sk/register"],
         "js": ["content.js"]
-    }]
- }
+    }],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
